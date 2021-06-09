@@ -1,0 +1,42 @@
+HEADER{
+width: auto;
+height: 10vh;
+background-color: #BE760C;
+color: black;
+padding: 5px;
+position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
+position: sticky;
+top: 0;
+z-index: 2;
+text-align: center;
+}
+
+BODY{
+  margin: 0 0 0 0px;
+}
+
+H1{
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor{
+
+}
+
+.cuerpo{
+width: 80vw;
+background-color: #EFEBE9;
+position:
+}
+
+.brazoizq{
+  width: 10vw;
+  float: left;
+  background-color: grey;
+}
+
+.brazoder{
+  width: 20vw;
+  float: right;
+  background-color: grey;
+}
