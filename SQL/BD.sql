@@ -33,9 +33,3 @@ INSERT INTO temas VALUES("Ciencia");
 INSERT INTO temas VALUES("Biologia");
 INSERT INTO temas VALUES("Literatura");
 INSERT INTO temas VALUES("Cocina");
-
-INSERT INTO revista VALUES('', "Aviones en el mar", "Porrua", "Margarita","Ciencia");
-INSERT INTO revista VALUES('', "Prueba ciencia 1", "Porrua", "Juancho", "Ciencia");
-INSERT INTO revista VALUES('', "Los monos en el bosque", "EMU", "Juan", "Biologia");
-INSERT INTO revista VALUES('', "Pizza con pina es mejor", "Piteseria", "Buen gusto", "Cocina");
-INSERT INTO revista VALUES('', "Sin ideas", "Sprite", "Chayan", "Literatura");
