@@ -61,7 +61,6 @@ links veloces
 
     while($row = mysqli_fetch_array($ciencia))
     {
-      echo  $row["dir"] ;
     echo '<tr>' . $row["nombre"];
     echo '</tr>';
     echo '<br>';
