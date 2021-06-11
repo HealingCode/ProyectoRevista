@@ -2,6 +2,18 @@ CREATE DATABASE revistas;
 
 USE revistas;
 
+CREATE TABLE usuario(
+id_usuario INT NOT NULL AUTO_INCREMENT,
+userName VARCHAR(24) NOT NULL,
+password VARCHAR(32) NOT NULL,
+email VARCHAR(255) NOT NULL,
+nombrePila VARCHAR(64) NOT NULL,
+apellidoPate VARCHAR(64) NOT NULL,
+apellidoMate VARCHAR(64) DEFAULT '',
+PRIMARY KEY(id_usuario),
+PRIMARY KEY(email)
+)ENGINE=INNODB;
+
 CREATE TABLE revista(
 id INT AUTO_INCREMENT,
 nombre VARCHAR(100),

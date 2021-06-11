@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'\php\injectionSQL.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
 
 $sql = new sqlRevista();
 
@@ -18,9 +18,9 @@ $cocina = $sql -> selectRevistasCocina();
 <link rel="stylesheet" type="text/css" href="vistas/styles/style_general.css">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
 
@@ -32,8 +32,6 @@ $cocina = $sql -> selectRevistasCocina();
 <div class = "contenedor">
 
   <HEADER>
-
-    <h1>REVISTAS JUAN</h1>
 
   </HEADER>
 
@@ -47,6 +45,8 @@ $cocina = $sql -> selectRevistasCocina();
 
     <?php
 
+$descarga = "";
+
     echo '<TABLE>';
 
     while($row = mysqli_fetch_array($ciencia))
@@ -55,10 +55,13 @@ $cocina = $sql -> selectRevistasCocina();
     echo '<tr>' . $row["nombre"];
     echo '</tr>';
     echo '<br>';
-    echo '<tr>' . $row["editorial"];
+    echo '<tr>' ."Editorial ". $row["editorial"];
     echo '</tr>';
     echo '<br>';
-    echo '<tr>' . $row["autor"];
+    echo '<tr>' ."Autor " .$row["autor"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
     echo '</tr>';
     echo '<br>';
     echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
@@ -70,11 +73,95 @@ $cocina = $sql -> selectRevistasCocina();
 
     <h3> LITERATURA </h3>
 
+    <?php
+
+$descarga = "";
+
+    echo '<TABLE>';
+
+    while($row = mysqli_fetch_array($literatura))
+    {
+
+    echo '<tr>'  .$row["nombre"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "Editorial ".$row["editorial"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "Autor ".$row["autor"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
+    echo '</tr>';
+    echo '<br>';
+    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+    echo '<br>';
+
+    }
+
+    ?>
+
 
     <h3> COCINA </h3>
 
+    <?php
+
+    $descarga = "";
+
+    echo '<TABLE>';
+
+    while($row = mysqli_fetch_array($cocina))
+    {
+
+    echo '<tr>' . $row["nombre"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' ."Editorial ". $row["editorial"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' ."Autor ". $row["autor"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
+    echo '</tr>';
+    echo '<br>';
+    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+    echo '<br>';
+
+    }
+
+    ?>
+
 
     <h3> BIOLOGIA </h3>
+
+    <?php
+
+    $descarga = "";
+
+    echo '<TABLE>';
+
+    while($row = mysqli_fetch_array($biologia))
+    {
+
+    echo '<tr>' . $row["nombre"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' ."Editorial " .$row["editorial"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' ."Autor " .$row["autor"];
+    echo '</tr>';
+    echo '<br>';
+    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
+    echo '</tr>';
+    echo '<br>';
+    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+    echo '<br>';
+
+    }
+
+    ?>
 
 
   </div>

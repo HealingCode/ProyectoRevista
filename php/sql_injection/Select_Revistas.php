@@ -19,19 +19,19 @@ $result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = 'Ciencia' 
 
 function selectRevistasCocina(){
 $conexion = conecta();
-$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = Cocina ");
+$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = 'Cocina' ");
   return $result;
 }
 
 function selectRevistasLiteratura(){
 $conexion = conecta();
-$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = Literatura ");
+$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = 'Literatura' ");
   return $result;
 }
 
 function selectRevistasBiologia(){
 $conexion = conecta();
-$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = Biologia ");
+$result = mysqli_query($conexion, "SELECT * FROM revista WHERE tema = 'Biologia' ");
   return $result;
 }
 
