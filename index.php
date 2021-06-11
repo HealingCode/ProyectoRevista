@@ -57,13 +57,11 @@ links veloces
 
     <?php
 
-$descarga = "";
-
     echo '<TABLE>';
 
     while($row = mysqli_fetch_array($ciencia))
     {
-
+      echo  $row["dir"] ;
     echo '<tr>' . $row["nombre"];
     echo '</tr>';
     echo '<br>';
@@ -73,7 +71,7 @@ $descarga = "";
     echo '<tr>' ."Autor " .$row["autor"];
     echo '</tr>';
     echo '<br>';
-    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
+    echo '<tr>' . "<a href='". $row["dir"] . " '>Descarga Aqui!</a>";
     echo '</tr>';
     echo '<br>';
     echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
