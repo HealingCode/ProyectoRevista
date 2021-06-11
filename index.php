@@ -33,6 +33,18 @@ $cocina = $sql -> selectRevistasCocina();
 
   <HEADER>
 
+links veloces
+<br>
+
+<a href="php/forms/registrar_usuario.php"> Registrarse fast </a>
+<br>
+<a href="php/forms/iniciar_sesion.php"> Inciar sesion fast </a>
+<br>
+<a href="php/forms/subir_pdf.php"> Subir un PDF fast, que pide iniciar sesion </a>
+<br>
+<a href="php/logic/logout.php"> Logout </a>
+
+
   </HEADER>
 
 

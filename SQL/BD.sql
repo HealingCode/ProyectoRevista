@@ -10,8 +10,7 @@ email VARCHAR(255) NOT NULL,
 nombrePila VARCHAR(64) NOT NULL,
 apellidoPate VARCHAR(64) NOT NULL,
 apellidoMate VARCHAR(64) DEFAULT '',
-PRIMARY KEY(id_usuario),
-PRIMARY KEY(email)
+PRIMARY KEY(id_usuario)
 )ENGINE=INNODB;
 
 CREATE TABLE revista(

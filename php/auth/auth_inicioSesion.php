@@ -13,7 +13,7 @@ $row = mysqli_fetch_array($consulta);
   }else{
 
     $_SESSION['login_user'] = $_POST['email'];
-    header("Location:../../vistas/perfil_Usuario.php");
+    header("Location:../../");
 
   }
 
