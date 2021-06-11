@@ -1,4 +1,6 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
+$sqlRevista = new sqlRevista();
 
    $currentDirectory = getcwd();
    $uploadDirectory = "../../vistas/Revistas/";
@@ -29,6 +31,9 @@ echo $uploadDirectory;
 
      if (empty($errors)) {
        $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
+/*AQUI SE LLAMA LA SENTENCIA SQL QUE ALMACENA EL PATH*/
+      $sqlRevista -> insertRevista($_POST["nombre"],$_POST["editorial"],$_POST["autor"],$_POST["tema"],$uploadPath);
+
 
        if ($didUpload) {
          echo "The file " . basename($fileName) . " has been uploaded";

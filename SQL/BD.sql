@@ -19,8 +19,20 @@ nombre VARCHAR(100),
 editorial VARCHAR(100),
 autor VARCHAR(100),
 tema VARCHAR(100),
+dir VARCHAR(200),
 PRIMARY KEY(id)
 );
+
+CREATE TABLE temas(
+tema VARCHAR(30),
+PRIMARY KEY(tema)
+);
+
+
+INSERT INTO temas VALUES("Ciencia");
+INSERT INTO temas VALUES("Biologia");
+INSERT INTO temas VALUES("Literatura");
+INSERT INTO temas VALUES("Cocina");
 
 INSERT INTO revista VALUES('', "Aviones en el mar", "Porrua", "Margarita","Ciencia");
 INSERT INTO revista VALUES('', "Prueba ciencia 1", "Porrua", "Juancho", "Ciencia");
