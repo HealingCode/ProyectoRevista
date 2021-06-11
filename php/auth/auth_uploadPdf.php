@@ -2,7 +2,6 @@
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
 $sqlRevista = new sqlRevista();
 
-   $currentDirectory = getcwd();
    $uploadDirectory = "../../vistas/Revistas/";
    $errors = []; // Store errors here
 
@@ -16,17 +15,16 @@ $sqlRevista = new sqlRevista();
    $fileExtension = strtolower(end($tmpNoerr));
 
    $uploadPath = $uploadDirectory . basename($fileName);
-echo $uploadPath;
 echo '<br>';
-echo $uploadDirectory;
+
    if (isset($_POST['submit'])) {
 
      if (! in_array($fileExtension,$fileExtensionsAllowed)) {
-       $errors[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+       $errors[] = "Por favor sube un archivo PDF xd";
      }
 
      if ($fileSize > 20000000) {
-       $errors[] = "File exceeds maximum size (20MB)";
+       $errors[] = "Tu archivo pesa mas de (20MB)";
      }
 
      if (empty($errors)) {
