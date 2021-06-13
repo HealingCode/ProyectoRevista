@@ -14,7 +14,7 @@ $cocina = $sql -> selectRevistasCocina();
 
 <head>
 
-<title>Revistas y mas!</title>
+<title>Revistas UdeG</title>
 <link rel="stylesheet" type="text/css" href="vistas/styles/style_general.css">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -26,20 +26,40 @@ $cocina = $sql -> selectRevistasCocina();
 
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a href="#" class="navbar-brand text-danger font-weight-bold"><img src = 'Escudo_UdeG.png' height = "100">Revista UdeG </a>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-2">
+		    <form class="form-inline my-1 my-lg-0">
+			    <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar Revista">
+			    <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+
+          <button class="btn btn-success btn-sm ml-0" type="submit">iniciar sesion</button>
+          <button class="btn btn-success btn-sm" type="submit">Registrarce</button>
+
+
+		    </form>
+      </ul>
+    </div>
+
+  </nav>
 
 <body>
 
 <div class = "contenedor">
 
-  <HEADER>
+  <!--<HEADER>
 
     <h1>REVISTAS JUAN</h1>
 
-  </HEADER>
+  </HEADER>-->
 
 
 
-  <div class = "cuerpo">
+  <!--<div class = "cuerpo" > -->
+  <div class="p-3 mb-2 bg-dark text-white">
+
+
 
     <h2>Descarga aquí!</h2>
 
@@ -73,11 +93,12 @@ $cocina = $sql -> selectRevistasCocina();
 
     <h3> COCINA </h3>
 
-
+S
     <h3> BIOLOGIA </h3>
+    </div>
 
 
-  </div>
+  <!--</div>-->
 
 
   <FOOTER>
