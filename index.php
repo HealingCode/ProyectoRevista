@@ -67,30 +67,26 @@ links veloces
   <div class = "cuerpo" >
 
     <?php
-    echo '<div class ="fragmento"> ';
-    echo '<TABLE>';
+
 
     while($row = mysqli_fetch_array($revistas))
     {
-    echo '<tr> <h4>' . $row["nombre"] . "</h4>";
-    echo '</tr>';
+    echo '<div class ="fragmento"> ';
+
+    echo '<h4>' . $row["nombre"] . "</h4>";
     echo '<br>';
-    echo '<tr>' ."Editorial: ". $row["editorial"] ;
-    echo '</tr>';
+    echo "Editorial: ". $row["editorial"] ;
     echo '<br>';
-    echo '<tr>' ."Autor: " .$row["autor"] ;
-    echo '</tr>';
+    echo "Autor: " .$row["autor"] ;
     echo '<br>';
-    echo '<tr>' . "<a href='". $row["dir"] . " '>Descarga Aqui!</a>";
-    echo '</tr>';
+    echo "<a href='". $row["dir"] . " '>Descarga Aqui!</a>";
     echo '<br>';
     echo '</div>';
     echo '<br>';
-    echo '<br>';
     }
-echo '</div>';
-    ?>
 
+    ?>
+</table>
 </div>
 
 
