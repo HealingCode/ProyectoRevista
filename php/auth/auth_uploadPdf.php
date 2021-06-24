@@ -30,7 +30,7 @@ echo '<br>';
      if (empty($errors)) {
        $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 /*AQUI SE LLAMA LA SENTENCIA SQL QUE ALMACENA EL PATH*/
-      $sqlRevista -> insertRevista($_POST["nombre"],$_POST["editorial"],$_POST["autor"],$_POST["tema"],$uploadPath);
+      $sqlRevista -> insertRevista($_POST["nombre"],$_POST["editorial"],$_POST["autor"],$uploadPath);
 
 
        if ($didUpload) {

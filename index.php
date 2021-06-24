@@ -3,10 +3,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
 
 $sql = new sqlRevista();
 
-$ciencia = $sql -> selectRevistasCiencia();
-$literatura = $sql -> selectRevistasLiteratura();
-$biologia = $sql -> selectRevistasBiologia();
-$cocina = $sql -> selectRevistasCocina();
+$revistas = $sql -> selectRevistas();
 
 ?>
 
@@ -29,14 +26,15 @@ $cocina = $sql -> selectRevistasCocina();
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a href="#" class="navbar-brand text-danger font-weight-bold"><img src = 'Escudo_UdeG.png' height = "100">Revista UdeG </a>
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
 	    <ul class="navbar-nav ml-2">
 		    <form class="form-inline my-1 my-lg-0">
 			    <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar Revista">
 			    <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
 
-          <button class="btn btn-success btn-sm ml-0" type="submit">iniciar sesion</button>
+      <!--   <button class="btn btn-success btn-sm ml-0" type="submit">iniciar sesion</button>
           <button class="btn btn-success btn-sm" type="submit">Registrarce</button>
-
+      -->
 
 		    </form>
       </ul>
@@ -48,7 +46,7 @@ $cocina = $sql -> selectRevistasCocina();
 
 <div class = "contenedor">
 
-  <!--<HEADER>
+
 
 links veloces
 <br>
@@ -62,150 +60,46 @@ links veloces
 <a href="php/logic/logout.php"> Logout </a>
 
 
-  </HEADER>-->
 
 
 
-  <!--<div class = "cuerpo" > -->
-  <div class="p-3 mb-2 bg-dark text-white">
 
-
-
-    <h2>Descarga aquí!</h2>
-
-    <h3> CIENCIA </h3>
+  <div class = "cuerpo" >
 
     <?php
-
+    echo '<div class ="fragmento"> ';
     echo '<TABLE>';
 
-    while($row = mysqli_fetch_array($ciencia))
+    while($row = mysqli_fetch_array($revistas))
     {
-    echo '<tr>' . $row["nombre"];
+    echo '<tr> <h4>' . $row["nombre"] . "</h4>";
     echo '</tr>';
     echo '<br>';
-    echo '<tr>' ."Editorial ". $row["editorial"];
+    echo '<tr>' ."Editorial: ". $row["editorial"] ;
     echo '</tr>';
     echo '<br>';
-    echo '<tr>' ."Autor " .$row["autor"];
+    echo '<tr>' ."Autor: " .$row["autor"] ;
     echo '</tr>';
     echo '<br>';
     echo '<tr>' . "<a href='". $row["dir"] . " '>Descarga Aqui!</a>";
     echo '</tr>';
     echo '<br>';
-    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+    echo '</div>';
     echo '<br>';
-
+    echo '<br>';
     }
-
+echo '</div>';
     ?>
 
-    <h3> LITERATURA </h3>
+</div>
 
-    <?php
-
-$descarga = "";
-
-    echo '<TABLE>';
-
-    while($row = mysqli_fetch_array($literatura))
-    {
-
-    echo '<tr>'  .$row["nombre"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' . "Editorial ".$row["editorial"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' . "Autor ".$row["autor"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
-    echo '</tr>';
-    echo '<br>';
-    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
-    echo '<br>';
-
-    }
-
-    ?>
-
-
-    <h3> COCINA </h3>
-
-<<<<<<< HEAD
-    <?php
-
-    $descarga = "";
-
-    echo '<TABLE>';
-
-    while($row = mysqli_fetch_array($cocina))
-    {
-
-    echo '<tr>' . $row["nombre"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' ."Editorial ". $row["editorial"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' ."Autor ". $row["autor"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
-    echo '</tr>';
-    echo '<br>';
-    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
-    echo '<br>';
-
-    }
-
-    ?>
-
-
-=======
-S
->>>>>>> 3b227e76b5baae851a55fc1951fa8255344d5454
-    <h3> BIOLOGIA </h3>
-    </div>
-
-    <?php
-
-    $descarga = "";
-
-    echo '<TABLE>';
-
-    while($row = mysqli_fetch_array($biologia))
-    {
-
-    echo '<tr>' . $row["nombre"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' ."Editorial " .$row["editorial"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' ."Autor " .$row["autor"];
-    echo '</tr>';
-    echo '<br>';
-    echo '<tr>' . "<a href=". $descarga .  ">Descarga Aqui!</a>";
-    echo '</tr>';
-    echo '<br>';
-    echo '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
-    echo '<br>';
-
-    }
-
-    ?>
-
-
-  <!--</div>-->
 
 
   <FOOTER>
 
   </FOOTER>
 
-</div>
+
 
 </body>
 

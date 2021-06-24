@@ -1,9 +1,6 @@
 <?php
 session_start();
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
-$sql = new sqlRevista();
-$temas = $sql -> selectTemas();
-
 ?>
 <html>
 
@@ -29,21 +26,14 @@ if(isset($_SESSION['login_user'])){
        <br>
        <input type= 'text' name = 'editorial'>
        <br>
+       Nombre del autor:
+       <br>
        <input type = 'text' name = 'autor'>
        ";
 
-       ECHO "
-       Elije un tema:
-       <br>
-       <SELECT name='tema'>
-       " ;
-       while($row = mysqli_fetch_array($temas))
-       {
-        ECHO "<OPTION>". $row["tema"];
-       }
+
 
   ECHO "
-  </SELECT>
   <br>
   <br>
   <input type='submit' name='submit' value='Subir'>

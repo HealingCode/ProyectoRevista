@@ -25,8 +25,9 @@ H1{
 
 .cuerpo{
 width: 80vw;
-background-color: #EFEBE9;
-position:
+border-color: white;
+border-width: thick;
+border-style: dashed;
 }
 
 .brazoizq{
@@ -39,4 +40,11 @@ position:
   width: 20vw;
   float: right;
   background-color: grey;
+}
+
+.fragmento {
+  padding: 5px;
+  border-color: blue;
+  border-width: 4px;
+  border-style: solid;
 }
