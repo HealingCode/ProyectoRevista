@@ -23,46 +23,27 @@ $revistas = $sql -> selectRevistas();
 
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 </head>
+
+<HEADER>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a href="#" class="navbar-brand text-danger font-weight-bold"><img src = 'Escudo_UdeG.png' height = "100">Revista UdeG </a>
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-	    <ul class="navbar-nav ml-2">
-		    <form class="form-inline my-1 my-lg-0">
-			    <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar Revista">
-			    <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
-
-      <!--   <button class="btn btn-success btn-sm ml-0" type="submit">iniciar sesion</button>
-          <button class="btn btn-success btn-sm" type="submit">Registrarce</button>
-      -->
-
-		    </form>
-      </ul>
-    </div>
-
+      <a href="../../index.php" class="navbar-brand text-danger font-weight-bold"><img src = 'Escudo_UdeG.png' height = "100">Revista UdeG </a>
+      ||<a href="php/forms/registrar_usuario.php"> Registrarse</a> ||
+      <a href="php/forms/iniciar_sesion.php"> Inciar sesion</a>||
+      <a href="php/forms/subir_pdf.php"> Subir un PDF fast</a>||
+      <a href="php/logic/logout.php"> Logout</a> ||
   </nav>
+
+
+
+</HEADER>
 
 <body>
 
 <div class = "contenedor">
 
-
-
-links veloces
-<br>
-
-<a href="php/forms/registrar_usuario.php"> Registrarse fast </a>
-<br>
-<a href="php/forms/iniciar_sesion.php"> Inciar sesion fast </a>
-<br>
-<a href="php/forms/subir_pdf.php"> Subir un PDF fast, que pide iniciar sesion </a>
-<br>
-<a href="php/logic/logout.php"> Logout </a>
-
-
-
-
-
+<div class = "brazoizq"> </div>
+<div class = "brazoder"> </div>
 
   <div class = "cuerpo" >
 
@@ -87,13 +68,23 @@ links veloces
 
     ?>
 </table>
+
 </div>
 
+</div>
 
-
-  <FOOTER>
-
-  </FOOTER>
+<FOOTER>
+<p>
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate
+ velit esse cillum dolore eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident,
+ sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</FOOTER>
 
 
 
