@@ -26,13 +26,20 @@ $revistas = $sql -> selectRevistas();
 
 <HEADER>
 
+
+
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <div class="collapse navbar-collapse col-mr" >
       <a href="../../index.php" class="navbar-brand text-danger font-weight-bold"><img src = 'Escudo_UdeG.png' height = "100">Revista UdeG </a>
-      ||<a href="php/forms/registrar_usuario.php"> Registrarse</a> ||
-      <a href="php/forms/iniciar_sesion.php"> Inciar sesion</a>||
-      <a href="php/forms/subir_pdf.php"> Subir un PDF fast</a>||
-      <a href="php/logic/logout.php"> Logout</a> ||
+      <a href="php/forms/registrar_usuario.php"class="btn btn-success btn-sm active border border-white" role="button" aria-pressed="true"> Registrarse</a>
+      <a href="php/forms/iniciar_sesion.php"class="btn btn-success btn-sm active border border-white" role="button" aria-pressed="true" id="inicio"> Inciar sesion</a>
+      <a href="php/forms/subir_pdf.php"class="btn btn-dark btn-sm active border border-white" role="button" aria-pressed="true"> Subir un PDF fast</a>
+      <a href="php/logic/logout.php"class="btn btn-danger btn-sm active border border-dark" role="button" aria-pressed="true"> Logout</a>
+
   </nav>
+
 
 
 

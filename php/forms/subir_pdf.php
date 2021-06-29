@@ -1,15 +1,13 @@
+
 <?php
 session_start();
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\Select_Revistas.php';
 ?>
 <html>
-
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <body>
 
 <?php
-
-
 
 if(isset($_SESSION['login_user'])){
   ECHO "
@@ -41,8 +39,12 @@ if(isset($_SESSION['login_user'])){
    ";
  }else{
    ECHO "Debes iniciar sesion primero para subir un archivo";
+
  }
 ?>
+<br>
+<a href="iniciar_sesion.php"class="btn btn-success btn-sm active border border-white" role="button" aria-pressed="true"> Inciar sesion </a>
+
 </body>
 
 </html>

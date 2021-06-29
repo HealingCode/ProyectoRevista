@@ -14,7 +14,6 @@ $row = mysqli_fetch_array($consulta);
 
     $_SESSION['login_user'] = $_POST['email'];
     header("Location:../../");
-
   }
 
 }

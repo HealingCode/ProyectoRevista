@@ -59,6 +59,13 @@ border-style: ridge;
   border-width: dashed;
   border-style:dotted;
 }
+body{
+  background: url(../../udg-fondos.jpg) no-repeat center center fixef;
+  background-size: cover;
+}
+.user-img{
+  martin
+}
 
 a:link{
   color: green;
