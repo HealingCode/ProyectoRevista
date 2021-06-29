@@ -35,12 +35,18 @@ echo '<br>';
 
        if ($didUpload) {
          echo "The file " . basename($fileName) . " has been uploaded";
+         echo "<form action='../../index.php'>
+         <input type='submit' class='btn btn-success btn-sm active border border-white' value='Regresar'>
+         </form>";
        } else {
          echo "An error occurred. Please contact the administrator.";
        }
      } else {
        foreach ($errors as $error) {
          echo $error . "These are the errors" . "\n";
+         echo "<form action='../forms/subir_pdf.php'>
+         <input type='submit' class='btn btn-success btn-sm active border border-white' value='Regresar'>
+         </form>";
        }
      }
 

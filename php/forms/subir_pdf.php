@@ -38,12 +38,18 @@ if(isset($_SESSION['login_user'])){
   </form>
    ";
  }else{
-   ECHO "Debes iniciar sesion primero para subir un archivo";
+   ECHO "Debes iniciar sesion primero para subir un archivo ";
+   echo "<form action='iniciar_sesion.php'>
+   <input type='submit' class='btn btn-success btn-sm active border border-white' value='iniciar sesion'>
+   </form>";
+
+
 
  }
+
 ?>
-<br>
-<a href="iniciar_sesion.php"class="btn btn-success btn-sm active border border-white" role="button" aria-pressed="true"> Inciar sesion </a>
+
+
 
 </body>
 
